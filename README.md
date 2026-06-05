@@ -1,64 +1,216 @@
-# Bitcoin Price Tracker & Predictive Analytics
+# Bitcoin Market Analytics & Statistical Modeling
 
 ## Overview
 
-This project analyzes historical Bitcoin (BTC-USD) market data to identify trends, relationships, and predictive indicators that influence cryptocurrency price movements. The analysis combines exploratory data analysis (EDA), statistical modeling, and machine learning techniques to evaluate market behavior and generate predictive insights.
+This project explores historical Bitcoin (BTC-USD) market data through statistical analysis, exploratory data analysis (EDA), probability distributions, correlation analysis, and financial market modeling.
 
-The project examines Bitcoin price fluctuations, trading volume, market capitalization, and other key financial indicators to better understand cryptocurrency market dynamics.
+The objective is to identify market trends, volatility patterns, trading volume relationships, and market capitalization behavior while applying data science techniques commonly used in quantitative finance and cryptocurrency analytics.
 
----
-
-## Objectives
-
-* Analyze historical Bitcoin market performance
-* Identify trends and seasonal patterns in Bitcoin pricing
-* Explore relationships between key market variables
-* Develop predictive models for Bitcoin price forecasting
-* Evaluate model performance using statistical metrics
-* Visualize market behavior through data-driven dashboards
+This project demonstrates practical applications of Python, statistical modeling, data visualization, and financial analytics.
 
 ---
 
-## Dataset
+## Business Problem
 
-The dataset contains historical Bitcoin market information, including:
+Cryptocurrency markets are highly volatile and generate large amounts of market data. Investors, analysts, and financial institutions require analytical methods to better understand:
 
-* Open Price
-* Close Price
-* High Price
-* Low Price
-* Trading Volume
-* Market Capitalization
-* Date-Based Market Trends
+- Price behavior
+- Market volatility
+- Trading activity
+- Market capitalization growth
+- Statistical distributions of returns
+- Correlations between financial variables
 
-Data files are stored in the `data/` directory.
+This project provides a framework for analyzing Bitcoin market performance through data-driven insights.
 
 ---
 
-## Project Structure
+## Project Objectives
+
+- Analyze historical Bitcoin market data
+- Explore statistical characteristics of cryptocurrency returns
+- Identify relationships between market variables
+- Detect outliers and abnormal market activity
+- Visualize market trends and volatility
+- Apply probability distribution analysis
+- Demonstrate financial data science techniques
+
+---
+
+## Technologies Used
+
+### Programming Language
+
+- Python 3
+
+### Data Science Libraries
+
+- Pandas
+- NumPy
+- SciPy
+
+### Visualization Libraries
+
+- Matplotlib
+- Seaborn
+
+### Development Environment
+
+- Jupyter Notebook
+
+---
+
+## Dataset Features
+
+The dataset contains historical Bitcoin market information including:
+
+| Feature | Description |
+|----------|-------------|
+| Open | Opening price |
+| High | Daily high price |
+| Low | Daily low price |
+| Close | Closing price |
+| Volume | Trading volume |
+| Market Cap | Market capitalization |
+| Daily Change | Daily price movement |
+
+---
+
+# Exploratory Data Analysis
+
+## Volume vs Market Capitalization
+
+![Volume vs Market Cap](visuals/volume_vs_market_cap.png)
+
+This visualization examines the relationship between trading volume and market capitalization. Results indicate a strong positive association between increased trading activity and overall market growth.
+
+---
+
+## High vs Low Price Analysis
+
+![High vs Low](visuals/high_vs_low.png)
+
+Analysis of daily high and low prices demonstrates an extremely strong correlation, indicating predictable relationships between intraday price ranges.
+
+---
+
+## Daily Price Change Distribution
+
+![Daily Price Change](visuals/histogram_daily_price_change.png)
+
+Histogram analysis reveals that most daily Bitcoin price movements are concentrated around small percentage changes, with occasional extreme volatility events.
+
+---
+
+## Cumulative Distribution Function (CDF)
+
+![CDF Daily Change](visuals/cdf_daily_change.png)
+
+The cumulative distribution function provides insight into the probability of observing specific Bitcoin price movements.
+
+---
+
+## Volume vs Daily Price Change
+
+![Volume vs Daily Change](visuals/volume_vs_daily_price_change.png)
+
+This analysis explores the relationship between market participation and price volatility.
+
+---
+
+## Trading Volume Distribution
+
+![Volume Histogram](visuals/histogram_volume.png)
+
+Distribution analysis highlights significant trading volume outliers and the highly skewed nature of cryptocurrency trading activity.
+
+---
+
+# Statistical Analysis
+
+The project incorporates:
+
+- Descriptive Statistics
+- Correlation Analysis
+- Covariance Analysis
+- Probability Density Functions
+- Cumulative Distribution Functions
+- Outlier Detection
+- Distribution Modeling
+
+---
+
+# Key Findings
+
+### Market Capitalization
+
+- Strong positive relationship with trading volume.
+- Larger market capitalization generally coincides with increased trading activity.
+
+### Daily Returns
+
+- Daily Bitcoin returns exhibit significant kurtosis and heavy tails.
+- Extreme price movements occur more frequently than expected under normal distributions.
+
+### Volatility
+
+- Bitcoin demonstrates substantial volatility compared to traditional financial assets.
+- Large price swings create both risk and opportunity.
+
+### Trading Activity
+
+- Trading volume distributions are heavily right-skewed.
+- Several high-volume events significantly impact market behavior.
+
+---
+
+# Skills Demonstrated
+
+### Data Science
+
+- Data Cleaning
+- Exploratory Data Analysis
+- Statistical Modeling
+- Feature Analysis
+
+### Machine Learning Foundations
+
+- Data Preparation
+- Statistical Inference
+- Financial Data Modeling
+
+### Visualization
+
+- Histograms
+- Scatterplots
+- Distribution Analysis
+- Correlation Visualization
+
+### Finance Analytics
+
+- Cryptocurrency Analysis
+- Volatility Analysis
+- Market Behavior Evaluation
+- Quantitative Research
+
+---
+
+# Repository Structure
 
 ```text
 BitcoinPriceTracker/
-
-├── data/
-│   ├── bitcoin_price_Training.csv
-│   └── bitcoin_price_1week_Test.csv
-
+│
 ├── notebook/
 │   └── BitcoinTracker.ipynb
-
-├── docs/
-│   └── Bitcoin_Price_Analysis_Report.pdf
-
+│
 ├── visuals/
-│   └── BitcoinPricePredictionAI.png
-
-├── screenshots/
-│   ├── btc_price_trend.png
-│   ├── correlation_analysis.png
-│   ├── model_performance.png
-│   └── forecast_results.png
-
+│   ├── volume_vs_market_cap.png
+│   ├── high_vs_low.png
+│   ├── histogram_daily_price_change.png
+│   ├── cdf_daily_change.png
+│   ├── volume_vs_daily_price_change.png
+│   └── histogram_volume.png
+│
 ├── README.md
 ├── requirements.txt
 └── .gitignore
@@ -66,80 +218,69 @@ BitcoinPriceTracker/
 
 ---
 
-## Methodology
+# Installation
 
-### Exploratory Data Analysis (EDA)
+Clone the repository:
 
-* Price trend analysis
-* Distribution analysis
-* Correlation analysis
-* Outlier detection
-* Time-series visualization
+```bash
+git clone https://github.com/Dare215/BitcoinPriceTracker.git
+```
 
-### Statistical Analysis
+Navigate into the project:
 
-* Descriptive statistics
-* Trend analysis
-* Correlation analysis
-* Regression modeling
+```bash
+cd BitcoinPriceTracker
+```
 
-### Machine Learning
+Install dependencies:
 
-* Predictive modeling
-* Performance evaluation
-* Error analysis
-* Forecast generation
+```bash
+pip install -r requirements.txt
+```
 
----
+Launch Jupyter Notebook:
 
-## Key Findings
-
-* Bitcoin prices demonstrate significant volatility over time.
-* Trading volume and market capitalization show measurable relationships with price movement.
-* Statistical modeling provides useful forecasting insights.
-* Visual analytics help identify periods of rapid market growth and decline.
+```bash
+jupyter notebook
+```
 
 ---
 
-## Technologies Used
+# Future Enhancements
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-learn
-* Jupyter Notebook
-
----
-
-## Results
-
-The project produces:
-
-* Market trend visualizations
-* Correlation analysis
-* Predictive modeling outputs
-* Forecasting results
-* Performance evaluation metrics
+- Bitcoin price forecasting
+- Time series analysis
+- ARIMA modeling
+- LSTM neural networks
+- Market sentiment integration
+- Real-time cryptocurrency dashboard
+- Portfolio optimization analytics
 
 ---
 
-## Future Improvements
+# Author
 
-* Advanced time-series forecasting models
-* LSTM-based deep learning approaches
-* Real-time cryptocurrency API integration
-* Automated dashboard development
-* Multi-cryptocurrency portfolio analysis
+## Darious Brown
+
+PhD Candidate – Technology (Artificial Intelligence & Machine Learning)
+
+DBA Candidate
+
+Data Scientist | AI Engineer | Machine Learning Engineer | Financial Analytics Researcher
+
+### Connect With Me
+
+GitHub:
+https://github.com/Dare215
+
+LinkedIn:
+https://www.linkedin.com/in/dariousbrown
+
+Portfolio:
+https://dare215.github.io/DariousBrown-Portfolio/
 
 ---
 
-## Author
+## License
 
-**Darious Brown**
-
-* AI & Machine Learning Engineer
-* Data Scientist
-* Portfolio: https://dare215.github.io/DariousBrown-Portfolio/
-* GitHub: https://github.com/Dare215
+This project is intended for educational, research, and portfolio purposes.
